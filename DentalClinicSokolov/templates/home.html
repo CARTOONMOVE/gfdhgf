@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Стоматология</title>
+</head>
+<body>
+    <h1>Услуги стоматологии</h1>
+    <ul>
+        {% for service in services %}
+            <li>{{ service.name }}: {{ service.price }} <a href="{% url 'book_appointment' %}">Записаться</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
